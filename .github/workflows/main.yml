@@ -17,4 +17,4 @@ jobs:
         run: docker build -t ${{ secrets.DOCKER_USER }}/Basis_Project_API_Development:latest .
 
       - name: Upload container to Docker Hub with Push
-        run: docker push ${{ secrets.DOCKER_USER }}/:latest
+        run: docker push ${{ secrets.DOCKER_USER }}/Basis_Project_API_Development:latest
