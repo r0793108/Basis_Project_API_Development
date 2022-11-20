@@ -1,6 +1,6 @@
 version: "3.9"
 services:
  api-service:
-  image: r0793108/basis_project_api_development
+  image: jsels/basis_project_api_development
   ports:
     - "8000:8000"
