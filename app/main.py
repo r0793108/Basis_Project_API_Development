@@ -2,6 +2,11 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 
+class Year(BaseModel):
+    year: int
+    club: str
+
+
 app = FastAPI()
 
 origins = [
@@ -71,4 +76,9 @@ async def read_club(club: str):
         return {club + ' won the champions league in the year 2019'}
     elif club == 'Inter Milaan':
         return {club + ' won the champions league in the year 2010'}
+
+
+@app.post("/year/")
+async def create_Year(year: Year):
+    return year
 
