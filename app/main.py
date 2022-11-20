@@ -58,7 +58,7 @@ async def read_year(year: int):
     elif year == 2022:
         return {"in the year '" + str(year) + "', Real Madrid won the Champions League"}
     else:
-        return {"year must be between 2010-2022
+        return {"year must be between 2010-2022"}
 
 
 
