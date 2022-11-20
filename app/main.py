@@ -58,7 +58,7 @@ async def read_year(year: int):
     elif year == 2022:
         return {"in the year '" + str(year) + "', Real Madrid won the Champions League"}
     else:
-        return {"error"}
+        return {"year must be between 2010-2022
 
 
 
@@ -76,6 +76,8 @@ async def read_club(club: str):
         return {club + ' won the champions league in the year 2019'}
     elif club == 'Inter Milaan':
         return {club + ' won the champions league in the year 2010'}
+    else:
+        return {"club didn't won the champions league between 2010-2022"}
 
 
 @app.post("/year/")
